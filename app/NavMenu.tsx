@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { SignInButton, SignOutButton } from '@/components/buttons';
+import AuthCheck from '@/components/AuthCheck';
 export default function NavMenu(){
     return (
         <nav className="flex items-center justify-between w-full h-16 px-8 bg-blue-800 shadow-md">
@@ -22,6 +24,10 @@ export default function NavMenu(){
                 <Link href="/users" className="text-sm font-medium text-white underline hover:text-gray-400">
                         Users
                 </Link>
+                <SignInButton/>
+                <AuthCheck>
+                    <SignOutButton/>
+                </AuthCheck>
             </div>
         </nav>
     )

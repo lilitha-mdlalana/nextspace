@@ -13,7 +13,7 @@ const AuthCheck = ({children}:Props ) => {
     if(status === 'authenticated'){
         return <>{children}</>
     }else{
-        return <>Not logged in to see this</>
+        return <></>
     }
 }
 
